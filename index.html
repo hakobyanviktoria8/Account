@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://use.fontawesome.com/5957e40b5e.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+<body>
+<div class="container">
+    <div class="bg_top_color"></div>
+    <div class="left_menu">
+        <a href="">
+            <img class="logo" src="images/logo.png" alt="">
+            <img class="logo_min" src="images/logo_min.png" alt="">
+        </a>
+        <div class="profile">
+            <div>
+                <img src="images/profile.png" alt="">
+            </div>
+            <div class="profile_name">
+                <p>Carolina Mayer</p>
+                <hr>
+                <small>Company Super Admin</small>
+            </div>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen"><i class="fas fa-home-lg"></i>
+                <span>Home</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Documents')"><i class="fas fa-folder-open"></i>
+                <span>Documents</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Contacts')"><i class="fas fa-address-book"></i>
+                <span>Contacts</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Recordings')"><i class="fas fa-microphone"></i>
+                <span>Recordings</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Managment')"><i class="fas fa-user"></i>
+                <span>User Managment</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Interpreter')"><i class="fas fa-copy"></i>
+                <span>Interpreter Managment</span>
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'Locations')"><i class="fas fa-map-marker-alt"></i>
+                <span>Locations</span>
+            </button>
+        </div>
+        <div>
+            <button class="logout">
+                <i class="fad fa-sign-out"></i>
+                <span>| Log Out</span>
+            </button>
+        </div>
+    </div>
+    <div class="top_menu">
+        <nav>
+            <div id="tabtitle"></div>
+            <div class="icons">
+                <i class="fas fa-question-circle"></i>
+                <i class="far fa-bell"></i>
+                <i class="fas fa-cog"></i>
+            </div>
+        </nav>
+        <div class="main_content">
+            <div id="Home" class="tabcontent">
+                <div>
+                    <h3>Welcome!</h3>
+                    <h2>Carolina Mayer</h2>
+                    <p class="line_blue"></p>
+                    <img src="images/blue_logo.png" alt="">
+                </div>
+
+            </div>
+            <div id="Documents" class="tabcontent">
+                <div class="documents_sorting">
+                    <div>
+                        <select name="Category">
+                            <option value="">Category</option>
+                            <option value="ShowAll">Show All</option>
+                            <option value="Financial">Financial</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Healthcare">Healthcare</option>
+                        </select>
+                        <select name="Filters">
+                            <option value="">Filters</option>
+                            <option value="ShowAll">Show All</option>
+                            <option value="Tipe">Tipe</option>
+                            <option value="Date">Date</option>
+                            <option value="Status">Status</option>
+                        </select>
+                        <button class="search" id="search_btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="upload">
+                            Upload document
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="table_title">
+                        <div>
+                            <h4>
+                                <i class="fas fa-folder-open"></i>
+                                Document list
+                            </h4>
+                            <span>12 Items</span>
+                        </div>
+                        <div>
+                            <span>Quantity:</span>
+                            <select name="number">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                            </select>
+                            <div class="pagination">
+                                <a class="active" href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                ...
+                                <a href="#">6</a>
+                            </div>
+                            Go To:
+                            <input type="number">
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Document Name</th>
+                            <th>Tipe</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Interview</td>
+                            <td><i class="far fa-file-pdf"></i> PDF</td>
+                            <td>09.12.2020</td>
+                            <td>
+                                <button class="active_status">Active</button>
+                            </td>
+                            <td><i class="fal fa-ellipsis-v"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Interview</td>
+                            <td><i class="fas fa-file-word"></i> Word</td>
+                            <td>09.12.2020</td>
+                            <td>
+                                <button class="deactive_status">Deactive</button>
+                            </td>
+                            <td><i class="fal fa-ellipsis-v"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Interview</td>
+                            <td><i class="far fa-file-excel"></i> XLSX</td>
+                            <td>09.12.2020</td>
+                            <td>
+                                <button class="active_status">Active</button>
+                            </td>
+                            <td><i class="fal fa-ellipsis-v"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Interview</td>
+                            <td><i class="far fa-file-pdf"></i> PDF</td>
+                            <td>09.12.2020</td>
+                            <td>
+                                <button class="active_status">Active</button>
+                            </td>
+                            <td><i class="fal fa-ellipsis-v"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Interview</td>
+                            <td><i class="far fa-file-pdf"></i> PDF</td>
+                            <td>09.12.2020</td>
+                            <td>
+                                <button class="active_status">Active</button>
+                            </td>
+                            <td><i class="fal fa-ellipsis-v"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Interview</td>
+                            <td><i class="fas fa-file-word"></i> Word</td>
+                            <td>09.12.2020</td>
+                            <td>
+                                <button class="deactive_status">Deactive</button>
+                            </td>
+                            <td><i class="fal fa-ellipsis-v"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Interview</td>
+                            <td><i class="far fa-file-excel"></i> XLSX</td>
+                            <td>09.12.2020</td>
+                            <td>
+                                <button class="active_status">Active</button>
+                            </td>
+                            <td><i class="fal fa-ellipsis-v"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Interview</td>
+                            <td><i class="far fa-file-pdf"></i> PDF</td>
+                            <td>09.12.2020</td>
+                            <td>
+                                <button class="active_status">Active</button>
+                            </td>
+                            <td><i class="fal fa-ellipsis-v"></i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="Contacts" class="tabcontent">
+                <h3>Contacts</h3>
+            </div>
+            <div id="Recordings" class="tabcontent">
+                <h3>Recordings</h3>
+            </div>
+            <div id="Managment" class="tabcontent">
+                <h3>User Managment</h3>
+            </div>
+            <div id="Interpreter" class="tabcontent">
+                <h3>Interpreter Managment</h3>
+            </div>
+            <div id="Locations" class="tabcontent">
+                <h3>Locations</h3>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

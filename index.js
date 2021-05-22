@@ -15,8 +15,6 @@ function openCity(evt, tabName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-
-
 // Get the element with id="search_btn" and click on it and changes width
 let search_btn = document.getElementById("search_btn");
 let bool = false;
